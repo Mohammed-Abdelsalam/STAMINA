@@ -1,0 +1,677 @@
+/* Global */
+:root {
+    --main-color: #F23A2E;
+}
+
+::selection {
+    background-color: #000000;
+    color: #fff;
+}
+
+*, ::after, ::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    line-height: 1.7;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    padding: 1px;
+}
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.text-center {
+    text-align: center;
+}
+
+span,a,input,label {
+    display: inline-block;
+}
+
+.head-section {
+    color: #ababab;
+    font-size: 1.25rem;
+    max-width: 75%;
+    margin: auto;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+
+.head-section .title-head {
+    color: #000;
+    font-size: 2.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+
+
+/* Start Schedule Wrap */
+.schedule-wrap {
+    width: 700px;
+    background-color: var(--main-color);
+    padding: 40px;
+    position: relative;
+    color: #fff;
+    transform: translateY(-50%);
+}
+
+.schedule-wrap::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    transform: skewx(-20deg);
+    transform-origin: bottom left;
+    z-index: 0;
+}
+
+.schedule-wrap > div {
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    float: left;
+}
+
+.schedule-wrap > div.time strong {
+    display: block;
+    margin-bottom: -.5rem;
+    font-size: 1.3rem;
+}
+
+.schedule-wrap > div.contact {
+    text-align: right;
+}
+
+.schedule-wrap > div.contact a {
+    text-decoration: none;
+    width: 145px;
+    height: 50px;
+    line-height: 48px;
+    font-size: 1.1rem;
+    background-color: #F89D13;
+    color: #fff;
+    border-radius: 5px;
+    border: 2px solid #F89D13;
+    font-weight: bolder;
+    transition: .3s linear;
+    text-align: center;
+}
+
+.schedule-wrap > div.contact i {
+    position: relative;
+    top: 2px;
+    left: 5px;
+}
+
+/* End Schedule Wrap */
+
+
+/* Big Image */
+.bgimage {
+    background-image: url("../image/rope-jumping-ropes-human-training-28080.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 500px;
+    color: #fff;
+    position: relative;
+    margin-top: 100px;
+}
+
+.bgimage::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.bgimage .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.bgimage .content h2 {
+    font-size: 3rem;
+}
+
+.bgimage .content p {
+    font-size: 1.2rem;
+}
+
+.bgimage .content p a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.bgimage .content p a:hover {
+    text-decoration: none;
+}
+/* /Big Image */
+
+
+/* /Global  */
+
+/* Start Header */
+.header {
+    height: 100vh;
+    overflow: hidden;
+    color: #fff;
+    background-image: url("../image/person-about-to-start-lifting-the-barbell-inside-the-gym-685531.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+.header .navbar {
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    transition: .3s;
+    z-index: 9999;
+}
+
+.header .navbar .row > div.logo {
+    width: 30%;
+    float: left;
+}
+
+.header .navbar .row > div.logo h1 {
+    font-size: 1.5rem;
+    padding: 15px 0;
+    transition: .3s;
+}
+
+.header .navbar .row > div.navgation {
+    width: 70%;
+    float: left;
+}
+
+.header .navbar .row > div.logo h1::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: var(--main-color);
+    display: inline-block;
+    margin-left: 2px;
+}
+
+.header .navbar .row > div.navgation ul {
+    text-align: right;
+}
+
+.header .navbar .row > div.navgation ul li {
+    display: inline-block;
+}
+
+.header .navbar .row > div.navgation ul li a {
+    color: #Fff;
+    text-decoration: none;
+    padding: 20px 0px;
+    margin-right: 30px;
+    position: relative;
+}
+
+.header .navbar .row > div.navgation ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color);
+    font-size: 1.2rem;
+    transition: .3s;
+}
+
+.header .navbar .row > div.navgation ul li.active a::after,
+.header .navbar .row > div.navgation ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+.header .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.header .content h2 {
+    font-size: 4Vw;
+    font-weight: 900;
+}
+
+.header .content p {
+    margin: 0 auto 30px;
+    font-size: 1.5rem;
+    width: 65%;
+}
+
+.header .content a {
+    text-decoration: none;
+    padding: 10px 40px;
+    color: #fff;
+    border: 2px solid #fff;
+    font-size: 1.3rem;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.header .content a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.header .scroll {
+    background-color: #Fff;
+    padding: 0;
+    box-shadow: 3px -1px 5px #292727;
+}
+
+.header .scroll .row > div.logo h1,
+.header .scroll .row > div.navgation ul li a {
+    color: #000;
+}
+
+.header .scroll .row > div.navgation ul li a:hover,
+.header .scroll .row > div.navgation ul li.active a {
+    color: var(--main-color);
+}
+/* End Header */
+
+/* Start Site Section */
+
+.site-section .feature {
+    margin-bottom: 50px;
+}
+
+.site-section .feature .box-feature {
+    width: 33.333%;
+    float: left;
+    margin-top: 100px;
+    padding: 0 30px;
+}
+
+.site-section .box-feature .icon i {
+    color: var(--main-color);
+    font-size: 4rem;
+}
+
+.site-section .box-feature .head {
+    font-weight: bold;
+    margin: 2rem 0;
+}
+
+.site-section .box-feature .description {
+    color: #ababab;
+    font-size: 1.2rem;
+}
+
+/* End Site Section */
+
+/* Start Section Classes */
+.rooms-classes {
+    width: calc(50% - 1rem);
+    float: left;
+}
+
+.rooms-classes:first-of-type {
+    margin-right: 2rem;
+}
+
+.rooms-classes li {
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,.1);
+    transition: .3s;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 2rem;
+}
+
+.rooms-classes li .image {
+    width: 100px;
+    float: left;
+    height: 116px;
+}
+
+.rooms-classes li .image img {
+    width: 100%;
+    height: 100%;
+}
+
+.rooms-classes li .info {
+    width: calc(100% - 100px);
+    float: left;
+    padding: 30px 20px;
+    color: #aeaeae;
+    transition: .3s;
+}
+
+.rooms-classes li .info a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: .3s;
+}
+
+.rooms-classes li .info span {
+    text-transform: lowercase;
+}
+
+.rooms-classes li:hover {
+    transform: scale(1.2);
+    z-index: 2;
+}
+
+.rooms-classes li:hover .info {
+    background-color: var(--main-color);
+}
+
+.rooms-classes li:hover .info a {
+    color: #fff;
+}
+
+.rooms-classes li:hover .info p {
+    color: #ff7c67;
+}
+
+.classes .bgimage {
+    background-image: url("../image/healthy-woman-legs-dark-136404.jpg");
+}
+/* End Section Classes */
+
+/* Start Section Schedule */
+.schedule .days {
+    margin-bottom: 50px;
+}
+
+.schedule .days li {
+    width: calc(100% / 7);
+    background-color: #eee;
+    color: var(--main-color);
+    padding: 10px;
+    float: left;
+    font-size: 1.2rem;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.schedule .days li:hover,
+.schedule .days li.active {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.schedule .rooms-classes li .info {
+    padding: 15px 20px;
+    height: 116px;
+}
+
+.schedule .bgimage {
+    background-image: url("../image/woman-girl-fitness-28061.jpg");
+}
+
+.schedule .bgimage h2 {
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.schedule .class > .row:not(:first-child) {
+    display: none;
+}
+/* End Section Schedule */
+
+/* Start Section Trainers */
+.trainer {
+    padding-bottom: 100px;
+}
+.trainer .card {
+    width: 25%;
+    float: left;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.trainer .card .image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.trainer .card .head-name {
+    margin: 20px 0;
+}
+
+.trainer .card .head-name h4 {
+    font-size: 1.125rem;
+    color: #000;
+    font-weight: 700;
+}
+
+.trainer .card .head-name span {
+    color: #ccc;
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+.trainer .card .info p {
+    color: #989898;
+    font-size: .9rem;
+}
+/* End Section Trainers */
+
+/* Start Section Services */
+.services {
+    padding-bottom: 50px;
+}
+.services .feature {
+    margin-bottom: 100px;
+}
+/* End Section Services */
+
+/* Start Section Contact Us */
+.contact-us {
+    padding: 30px 0 100px;
+    background-color: #F8F9FA;
+}
+
+.contact-us form {
+    width: 58%;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.contact-us form input:not([type="submit"]),
+.contact-us form textarea {
+    width: 100%;
+    height: 50px;
+    border: 2px solid #CED4DA;
+    padding: 6px 12px;
+    margin-bottom:  1rem;
+    outline: none;
+    color: #6C757D;
+    font-size: 1rem;
+    text-transform: none;
+    transition: .3s;
+}
+
+.contact-us form .row input {
+    width: calc(50% - 1rem);
+    float: left;
+}
+
+.contact-us form .row input:first-child {
+    margin-right: 2rem;
+}
+
+.contact-us form textarea {
+    height: 250px;
+}
+
+.contact-us form input:not([type="submit"])::placeholder {
+    font-size: 1rem;
+    color: #6C757D;
+}
+.contact-us form textarea::placeholder {
+    font-size: 1.1rem;
+    color: #6C757D;
+}
+
+.contact-us form input[type="submit"] {
+    width: 50%;
+    background-color: var(--main-color);
+    padding: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+.contact-us form input:not([type="submit"]):focus,
+.contact-us form textarea:focus {
+    border-color: var(--main-color);
+}
+/* End Section Contact Us */
+/*  Start Schedule Wrap  */
+.contact-us + .row .schedule-wrap {
+    float: right;
+}
+
+.contact-us + .row .schedule-wrap::before {
+    transform-origin: bottom right;
+    transform: skewx(20deg);
+}
+/*  End Schedule Wrap  */
+
+/* Start Footer */
+.footer {
+    padding: 60px 0;
+    color: #989898;
+}
+
+.footer .row > div {
+    width: 33.3333%;
+    float: left;
+    padding: 15px;
+    margin-bottom: 50px;
+}
+
+.footer .row > div h4 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: .8rem;
+    margin-bottom: 40px;
+    color: #000;
+}
+
+.footer .row > div p {
+    margin-bottom: 20px;
+    text-transform: none;
+}
+
+.footer .row > div:nth-child(2) {
+    width: 25%;
+    margin-left: calc(33.333% - 25%);
+}
+
+.footer .row > div ul li a{
+    margin-bottom: 12px;
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 1.1rem;
+    transition: .3s;
+    font-weight: 300;
+}
+
+.footer .row > div ul li a:hover{
+    color: #c7180c;
+}
+
+.footer .row > div form input:not([type="submit"]) {
+    height: 50px;
+    padding: 6px 12px;
+    width: 75%;
+    float: left;
+    border: 2px solid #ced4da;
+    outline: none;
+    transition: .3s;
+    color: #6C757D;
+    font-size: 1.1rem;
+}
+
+.footer .row > div form input:not([type="submit"])::placeholder {
+    font-size: 1rem;
+    color: #6C757D;
+}
+
+.footer .row > div form input:not([type="submit"]):focus {
+    border-color: var(--main-color);
+}
+
+.footer .row > div form input[type="submit"] {
+    width: 25%;
+    float: left;
+    background-color: var(--main-color);
+    color: #fff;
+    height: 50px;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.footer .copyright {
+    font-weight: 300;
+    padding: 100px;
+}
+
+.footer .copyright i,
+.footer .copyright a {
+    color: var(--main-color);
+}
+
+.footer .copyright a {
+    text-decoration: none;
+}
+/* End Foooter */
